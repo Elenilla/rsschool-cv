@@ -12,5 +12,25 @@ Looking for opportunities to bring together my experience as an English teacher 
 - CSS3
 - JavaScript
 - Git and GitHub
+- C++
+- Godot
+- Visionaire Editor 5
+
+## Code examples:
+
+## Work experience:
+- English tutor, September 2019 - present day
+- Experimental English school teacher, 2011-2012
+- Primary, Secondary and High school teacher, 2007-2012
+
+## Education:
+- Moscow City Pedagogical University, English language department
+- RS School (in progress)
+
+## Languages:
+- Russian native
+- English C1
+- Japanese A2
+- German A2
 
 
