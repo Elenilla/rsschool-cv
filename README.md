@@ -1,1 +1,2 @@
-Here will be a link to my CV
+https://Elenilla.github.io/rsschool-cv/cv
+https://Elenilla.github.io/rsschool-cv/
