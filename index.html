@@ -3,8 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="centered-block">
+    <header>
+        <img src="image.jpg" alt="My photo" class="center"  width="187" height="239">
+        <h1 class="header1">Elena Illarionova</h1>
+        <p class="text">Looking for opportunities to bring together my experience 
+            as an English teacher and programmer. Have a lot of experience teaching English, 
+            writing course programs and creating individual exercises. My dream is to create 
+            a website with user-friendly, intuitive gamified experience for teaching and 
+            learning English. My programming skills are not up to par yet, but I'm striving to get there. </p>
+        <nav class="text">
+	        <ul>
+		        <li>
+                    <a href="#contacts">Contact information</a>
+                </li>
+		        <li>
+                    <a href="#skills">Skills</a>
+                </li>
+		        <li>
+                    <a href="#code-example">Code example</a>
+                </li>
+                <li>
+                    <a href="#experience">Work experience</a>
+                </li>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+                <li>
+                    <a href="#languages">Languages</a>
+                </li>
+	        </ul>
+	    </nav>
+    </header>
+    <main>
+        <p class="header2" id="contacts">Contact information</p>
+        <ul class="text">
+            <li>witchhel@yandex.ru</li>
+        </ul>
+        <p class="header2" id="skills">Skills</p>
+        <ul class="text">
+            <li>HTML</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Git and GitHub</li>
+            <li>C++</li>
+            <li>Godot and GDScript</li>
+            <li>Visionaire Editor 5</li>
+        </ul>
+        <p class="header2" id="code-example">Code example</p>   
+        <p class="text">The new game function from my Godot project.</p>
+        <pre>
+            <code>
+func new_game():
+	# clear all existing tasks
+	for child in blocks_container.get_children():
+		child.queue_free()
+	
+	#wait one frame for cleanup
+	await get_tree().process_frame
+	
+	# recreate tasks that are on the right
+	for i in range (9):
+		var new_task = TASK.instantiate()
+		new_task.task_done.connect(_on_task_completed)
+		
+		blocks_container.add_child(new_task)
+		if i &lt; 3:
+			new_task.red()
+			
+		if i > 2 and i &lt; 6:
+			new_task.yellow()
+		if i > 5:
+			new_task.blue()
+	
+	for x in range (9):
+		tiles[x].queue_free()
+	tiles.clear()
+	
+	await get_tree().process_frame
+	
+	tile_color.shuffle()
+		
+	# Filling in the grid with blocks
+	for i in range (9):
+		var new_tile = TILE.instantiate()
+		add_child(new_tile)
+		new_tile.position = table_coordinates[i]
+		new_tile.grid_id = i
+		if tile_color[i] == 0:
+			new_tile.red()
+			new_tile.color = 0
+		elif tile_color[i] == 1:
+			new_tile.yellow()
+			new_tile.color = 1
+		else:
+			new_tile.blue()
+			new_tile.color = 2
+		tiles.append(new_tile)
+	show_game()
+	return
+            </code>
+        </pre>
+        <p class="header2" id="experience">Work experience</p>
+        <ul class="text">
+            <li>English tutor, September 2019 - present day</li>
+            <li>Head administrator, actress, theatre MOST</li>
+            <li>Experimental English school teacher, 2011-2012</li>
+            <li>Primary, Secondary and High school teacher, 2007-2012</li>
+        </ul>
+        <p class="header2" id="education">Education</p>
+        <ul class="text">
+            <li>Moscow City Pedagogical University, English language department</li>
+            <li>RS School (in progress)</li>
+        </ul>
+        <p class="header2" id="languages">Languages</p>
+        <ul class="text">
+            <li>Russian native</li>
+            <li>English C1</li>
+            <li>Japanese A2</li>
+            <li>German A2</li>
+        </ul>
+    </main>
+    <footer>
+        <a href="https://github.com/Elenilla" class="text">My GitHub</a>
+        <p class="text">2026</p>
+        <a href="https://rs.school/courses/javascript" class="text"><img src="rs-school-logo.svg" alt="School logo" class="center"></a>
+        <a href="https://rs.school/courses/javascript" class="text">JavaScript / Front-end course</a>
+    </footer>
 </body>
 </html>
